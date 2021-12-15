@@ -1,5 +1,6 @@
 from selenium import webdriver
 from time import sleep
+import os
 URL = r'http://tool.chinaz.com/dns/?type=1&host=github.com&ip='
 HOSTS = r"C:\Windows\System32\drivers\etc\hosts"
 chrome_opts = webdriver.ChromeOptions()
@@ -31,3 +32,4 @@ with open(HOSTS,'w',encoding='utf8')as f_w:
         f_w.write(line)
     f_w.write(data)
 
+os.system('ipconfig /flushdns')
