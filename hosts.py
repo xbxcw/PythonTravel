@@ -22,6 +22,8 @@ browser.quit()
 data = info[0]+' '+'github.com # hyc'
 
 with open(HOSTS,'r',encoding='utf8') as f:
+
+    
     lines = f.readlines()
 
 
@@ -33,3 +35,4 @@ with open(HOSTS,'w',encoding='utf8')as f_w:
     f_w.write(data)
 
 os.system('ipconfig /flushdns')
+print(data)
